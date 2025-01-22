@@ -61,11 +61,30 @@ const AboutPage = () => {
       </Title>
       <Section>
         <Text>
-          Thorvald Sanchez was a self-taught artist who became an integral part
-          of the cultural and artistic scenes in the late 1960s and 1970s,
-          particularly in Latin art and Latin jazz. He shared a unique artistic
-          perspective that positioned him among notable figures such as Lolo
-          Soldevila and Carmen Herrera.
+          Thorvald Sanchez was a self-taught artist who played a significant
+          role in the cultural and artistic movements of the 1960s and 1970s in
+          New York, later making a lasting impact in South Florida from the
+          1970s onward. His work, rooted in the formal principles of modernism,
+          reflects a deeply personal exploration of line and space. With each
+          piece, he created an ever-evolving interplay of theme and variation.
+          Sanchez’s paintings are dynamic, continually shifting and reforming
+          before the viewer’s eyes. Bold black lines and the spaces they define
+          seem to coexist and compete, creating a visual tension that invites
+          prolonged observation. What appears to thrust forward on first glance
+          may recede upon closer inspection, transforming seemingly simple
+          compositions into complex studies of linear and spatial
+          relationships.His art embodies a unique blend of conviction and
+          intellect.
+        </Text>
+        <Text>
+          In addition to his accomplishments as an artist, Sanchez was an avid
+          collector of Cuban art, amassing works by renowned avant-garde figures
+          of the 1950s, including Mariano Rodríguez and René Portocarrero. He
+          was also an admirer of Fernand Léger and an expert in Art Deco and
+          mid-century design, integrating these influences into his artistic
+          perspective and collection. Thorvald Sanchez’s legacy is one of
+          innovation, curiosity, and a profound dedication to the dialogue
+          between art and design.
         </Text>
         <Text>
           Sanchez began his journey in Rome in the early 1960s, where he spent
@@ -104,11 +123,10 @@ const AboutPage = () => {
       <Section>
         <SubTitle>Legacy</SubTitle>
         <Text>
-          Thorvald Sanchez’s contribution to Latin art and his involvement in
-          the vibrant cultural scene of Miami in the 1980s and 1990s solidified
-          his legacy as a pioneering artist. His works remain an essential part
-          of Latin American art history and continue to inspire future
-          generations.
+          Thorvald Sanchez’s contribution to art and his involvement in the
+          vibrant cultural scene of Miami in the 1980s and 1990s solidified his
+          legacy as a pioneering artist. His works remain an essential part of
+          Latin American art history and continue to inspire future generations.
         </Text>
       </Section>
       <Hr />
