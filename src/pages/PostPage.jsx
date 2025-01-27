@@ -4,7 +4,7 @@ import styled from "styled-components";
 import client from "../contentfulClient";
 
 const Container = styled.main`
-  max-width: 800px;
+  max-width: 900px;
   margin: 2rem auto;
   padding: 1rem;
 `;
@@ -27,6 +27,7 @@ const ImageWrapper = styled.div`
 const Image = styled.img`
   width: auto; /* Allows the image to adjust based on height */
   height: 100%; /* Ensures the image takes up the full height */
+  max-width: 90%;
 `;
 
 const Content = styled.div`
