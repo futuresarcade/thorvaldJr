@@ -10,6 +10,7 @@ const GridContainer = styled.section`
   gap: 1.5rem;
   max-width: 1200px;
   margin: 0 auto;
+  text-decoration: none;
 `;
 
 const Placeholder = styled.div`

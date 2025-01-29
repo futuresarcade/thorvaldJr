@@ -7,32 +7,42 @@ const Container = styled.main`
   max-width: 900px;
   margin: 2rem auto;
   padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 `;
 
 const Title = styled.h1`
   font-size: 1.5rem;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
+  text-align: center;
 `;
 
 const ImageWrapper = styled.div`
   width: 100%;
-  height: 600px; /* Adjust the height as needed */
-  overflow: hidden; /* Ensures content outside the container is hidden */
+  height: calc(100vh - 140px); /* Adjust dynamically based on screen height */
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 1rem 0;
+  overflow: hidden;
+  margin: 0;
+
+  @media (max-width: 768px) {
+    height: calc(100vh - 110px); /* Slightly adjust for smaller screens */
+  }
 `;
 
 const Image = styled.img`
-  width: auto; /* Allows the image to adjust based on height */
-  height: 100%; /* Ensures the image takes up the full height */
-  max-width: 90%;
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* Ensures the full image is visible without cropping */
 `;
 
 const Content = styled.div`
   font-size: 1.2rem;
   line-height: 1.6;
+  padding: 1rem;
+  text-align: justify;
 `;
 
 const PostPage = () => {
@@ -63,6 +73,7 @@ const PostPage = () => {
       )}
 
       <Content>{post.body}</Content>
+      <Title>{post.title}</Title>
     </Container>
   );
 };
