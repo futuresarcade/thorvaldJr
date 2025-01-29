@@ -4,23 +4,33 @@ import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 import { BLOCKS } from "@contentful/rich-text-types";
 
 const Card = styled.div`
-  background-color: ${({ theme }) => theme.colors.cardBackground};
-  padding: 1.5rem;
+  background: #fff;
+  padding: 1rem;
   border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  text-align: center;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  cursor: pointer; /* Make it clear that the card is clickable */
 
   &:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
   }
 `;
 
-const Title = styled.h3`
+const StyledLink = styled(Link)`
+  text-decoration: none; /* Remove underline */
+  color: inherit; /* Inherit color from parent */
+`;
+
+const Title = styled.h2`
   font-size: 1.5rem;
-  margin-bottom: 1rem;
-  color: ${({ theme }) => theme.colors.text};
+  text-decoration: none; /* Remove underline */
+  color: #333;
+  margin-bottom: 0.5rem;
+
+  &:hover {
+    color: #0073e6; /* Subtle color change on hover */
+  }
 `;
 
 const Excerpt = styled.p`
@@ -48,9 +58,9 @@ const renderOptions = {
 const BlogCard = ({ id, title, excerpt, body, imageUrl }) => (
   <Card>
     {imageUrl && <Image src={imageUrl} alt={title} />}
-    <Link to={`/post/${id}`}>
+    <StyledLink to={`/post/${id}`}>
       <Title>{title}</Title>
-    </Link>
+    </StyledLink>
     <Excerpt>{excerpt}</Excerpt>
     {body && <div>{documentToReactComponents(body)}</div>}
   </Card>

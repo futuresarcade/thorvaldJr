@@ -14,8 +14,11 @@ const Container = styled.main`
 
 const Title = styled.h1`
   font-size: 1.5rem;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.3rem;
   text-align: center;
+  @media (max-width: 768px) {
+    margin-bottom: 0.2rem; /* Even smaller gap for mobile */
+  }
 `;
 
 const ImageWrapper = styled.div`
@@ -28,7 +31,7 @@ const ImageWrapper = styled.div`
   margin: 0;
 
   @media (max-width: 768px) {
-    height: calc(100vh - 110px); /* Slightly adjust for smaller screens */
+    height: calc(100vh - 100px); /* Slightly adjust for smaller screens */
   }
 `;
 
@@ -36,6 +39,11 @@ const Image = styled.img`
   width: 100%;
   height: 100%;
   object-fit: contain; /* Ensures the full image is visible without cropping */
+
+  @media (max-width: 768px) {
+    height: auto; /* Let the image shrink naturally on small screens */
+    max-height: 80vh; /* Prevents it from being too large */
+  }
 `;
 
 const Content = styled.div`
